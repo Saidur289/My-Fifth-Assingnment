@@ -3,10 +3,6 @@ document.getElementById('blog-btn').addEventListener('click', function(){
     window.location.href = './blog.html';
 })
 
-// global variable 
-
-
-
 // update input value  common function - 1
 function updateInputValue(id){
     const inputValue = parseFloat(document.getElementById(id).value);
