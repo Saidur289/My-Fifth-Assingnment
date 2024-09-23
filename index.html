@@ -30,7 +30,10 @@
               fontFamily: {
           'lexend'  : ['Lexend' , 'sans-serif'],
 
-             },
+             }, 
+              backdropBlur: {
+        md: '10px', 
+      },
 
             },
           },
@@ -39,8 +42,8 @@
       </script>
 </head>
 <body class="font-lexend">
-   <header class="sticky top-0 z-50">
-    <div class="bg-[#F9F7F3] shadow-sm rounded-sm py-3">
+   <header class="sticky top-0 z-50 ">
+    <div class="bg-[#F9F7F3]/70 shadow-sm rounded-sm py-3 backdrop-blur-md">
         <div class="w-11/12 mx-auto ">
             <div class="navbar">
                 <div class="navbar-start">
@@ -63,16 +66,16 @@
               </div>
         </div>
     </div>
-    <div class="sticky top-0 bg-[#F9F7F3] z-10"></div>
-        <div class="text-center flex gap-2 justify-center pt-10">
-            <button class="btn btn-lg bg-secondary font-bold ">Donation</button>
-            <button class="btn btn-lg bg-white font-lexend">History</button>
+    <div class="sticky top-0 z-10 "></div>
+        <div class="text-center flex gap-2 justify-center pt-10 backdrop-blur-md ">
+            <button class="btn btn-lg  font-lexend bg-secondary font-bold" id="show-donation">Donation</button>
+            <button class="btn btn-lg bg-white font-lexend bg-secondary font-bold" id="show-history">History</button>
         </div>
     </div>
    </header>
    <main>
     <!-- Donation section start here  -->
-     <section class="mt-10  w-11/12 mx-auto  mb-20">
+     <section class="mt-10  w-11/12 mx-auto  mb-20" id="donation-form">
         <!-- card-1  -->
          <div class="flex flex-col gap-3 border-2 border-blue-50 shadow-sm lg:flex lg:flex-row lg:items-center lg:mt-5  p-5 ">
             <!-- imgage -->
@@ -126,11 +129,27 @@
          </div>
      </section>
      <!-- History section  -->
-      <section id="history-container" class="lg:w-2/3 lg:mx-auto lg:space-y-4 lg:mb-10" >
-        History
+      <section id="history-container" class="lg:w-2/3 lg:mx-auto lg:space-y-4 lg:mb-10 hidden mt-10">
+        
       </section>
       <section class="bg-[#F9F7F3] h-20"></section>
-    
+    <!-- modal  -->
+     <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+<dialog id="my_modal_1" class="modal hidden">
+  <div class="modal-box text-center space-y-2">
+    <h3 class="text-lg font-bold">Congrats!</h3>
+    <img src="assets/coin.png" class="mx-auto" alt="">
+    <p>You Have Donated for Humankind</p>
+    <p class="py-4">Successfully</p>
+    <div class="modal-action flex justify-center">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close Confirmation</button>
+      </form>
+    </div>
+  </div>
+</dialog>
     
    </main>
     <script src="./js/app.js"></script>
