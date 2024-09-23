@@ -131,7 +131,7 @@ document.getElementById('donate-btn3').addEventListener('click', function(){
     }
     
 })
-
+// addEventListener on show button 
 const showDonation =  document.getElementById('show-donation');
 showDonation.addEventListener('click', function(){
  addClassList('show-donation');
