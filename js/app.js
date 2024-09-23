@@ -137,6 +137,8 @@ showDonation.addEventListener('click', function(){
  addClassList('show-donation');
  removeHidden('donation-form');
 })
+
+// addEventListener on history button 
 const showHistory = document.getElementById('show-history');
 showHistory.addEventListener('click', function(){
     addClassList('show-history');
