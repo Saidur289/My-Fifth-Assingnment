@@ -102,7 +102,7 @@ document.getElementById('donate-btn2').addEventListener('click', function(){
         updateSpanText('second-amount', secondValue);
     updateSpanText('total-amount', -1 * secondValue);
     document.getElementById('second-input-value').value = "";
-    let str = 'for Flood Relief in NoahKhali';
+    let str = 'for Flood Relief in NoaKhali';
     addHistoryItem(secondValue,str);
     const modal = document.getElementById('my_modal_1');
    modal.showModal();
